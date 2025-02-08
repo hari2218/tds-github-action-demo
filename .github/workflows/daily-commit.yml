@@ -13,17 +13,17 @@ jobs:
   commit-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository - hariharan.chandran@straive.com
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
-      - name: Update content - hariharan.chandran@straive.com
-        run: |
-          echo "Last run: $(date)" > last_run.txt
+      - name: Update content
+        run: | # python
+          python hw.py
 
-      - name: Commit changes - hariharan.chandran@straive.com
+      - name: hariharan.chandran@straive.com
         run: |
           git config --global user.name "Daily Commit"
           git config --global user.email "hariharan.chandran@straive.com"
-          git add .
-          git commit -m "Automated daily commit - $(date)"
+          git add .txt
+          git commit -m "Automated daily commit - $(date)" || exit 0
           git push
