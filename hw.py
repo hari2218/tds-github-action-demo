@@ -1,10 +1,10 @@
 import datetime
 
-# Get today's date
-today = datetime.date.today()
+# Get today's date and time
+now = datetime.datetime.now()
 
-# Format the date as a string (e.g., 'YYYY-MM-DD')
-date_str = today.strftime('%Y-%m-%d')
+# format date and time
+date_str = now.strftime("%Y-%m-%d %H:%M:%S")
 
 # Create a filename using today's date
 filename = "today.txt"
