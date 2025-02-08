@@ -19,7 +19,7 @@ jobs:
 
       - name: Commit changes - hariharan.chandran@straive.com
         run: |
-          git config --global user.name "Hariharan C"
+          git config --global user.name "hari2218"
           git config --global user.email "hariharan.chandran@straive.com"
           git add last_run.txt
           git commit -m "Automated daily commit - $(date)"
