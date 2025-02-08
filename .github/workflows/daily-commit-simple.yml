@@ -1,0 +1,19 @@
+name: Daily Commit
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '10 18 * * *'  # Runs daily at 18:00 UTC
+
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  commit-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: By hariharan.chandran@straive.com
+        run: |
+          echo "Last run by hariharan.chandran@straive.com"
