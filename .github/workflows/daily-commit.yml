@@ -13,10 +13,10 @@ jobs:
   commit-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository - hariharan.chandran@straive.com
         uses: actions/checkout@v4
 
-      - name: Update content
+      - name: Update content - hariharan.chandran@straive.com
         run: |
           echo "Last run: $(date)" > last_run.txt
 
