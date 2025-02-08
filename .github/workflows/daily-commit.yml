@@ -24,6 +24,6 @@ jobs:
         run: |
           git config --global user.name "Daily Commit"
           git config --global user.email "hariharan.chandran@straive.com"
-          git add last_run.txt
+          git add .
           git commit -m "Automated daily commit - $(date)"
           git push
